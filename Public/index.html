@@ -421,7 +421,7 @@ const resultsData = {
       reference: 'IELTS-2026-001',
       trf: '26BD520185AKTM001A',
       overall: 8.0,
-      optionsText: 'Find out which organisations recognise your score and what you can do next.',
+      optionsText: 'if you didn't get the score you needed, you might be able to improve it',
       skills: [
         { name: 'Listening', score: 9.0,
           explain: 'Test takers at Band 9 can typically follow extended speech involving complex and detailed argumentation, as well as predict further development. They can recognize a wide range of vocabulary, including specialized, technical, and academic terminology and idiomatic language.',
@@ -506,7 +506,7 @@ function rsResultsPanel(t) {
     <p class="rs-explain">${escapeHtml(s.explain)}</p>
     <div class="rs-improve"><strong>How to improve:</strong><p>${escapeHtml(s.improve)}</p></div>`).join('');
   return `<div class="rs-overall"><strong class="rs-overall-label">Your overall band score</strong><span class="rs-ring rs-ring-lg" role="img" aria-label="Overall band score ${overall}">${overall}</span><button class="rs-link" type="button" data-rs="jump">View full scores and explanation</button></div>
-    <div class="rs-card"><h3 class="rs-card-h">What can you do with this score?</h3><p>${escapeHtml(t.optionsText)}</p><button class="rs-btn rs-outline" type="button" data-rs="tab" data-tab="organisations">See my options</button></div>
+    <div class="rs-card"><h3 class="rs-card-h">Didn't get the score you needed?</h3><p>${escapeHtml(t.optionsText)}</p><button class="rs-btn rs-outline" type="button" data-rs="tab" data-tab="organisations">See my options</button></div>
     <hr class="rs-dots">
     <h3 class="rs-h" id="rsFull">Your full score and explanation</h3>${rows}
     <div class="rs-row rs-total"><span>Your overall band score</span><span class="rs-row-score">${overall.toFixed(1)}</span></div>
