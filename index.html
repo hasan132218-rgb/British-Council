@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#240b55" />
+<title>IELTS — Your Next Chapter | Student Demo</title>
+<style>
+:root{--purple:#250858;--purple2:#361078;--red:#e31837;--blue:#13c3e8;--ink:#211b2d;--muted:#655f6e;--pale:#f5f2fb;--line:#e5dfed;--white:#fff;--shadow:0 16px 42px rgba(35,8,84,.13);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.demo-strip{display:flex;gap:10px;justify-content:center;align-items:center;text-align:center;padding:8px 14px;background:#f5f0ff;color:#422179;font-size:12px;font-weight:650;letter-spacing:.01em}.demo-strip a{text-decoration:underline;text-underline-offset:3px}.site-header{position:sticky;top:0;z-index:30;background:rgba(37,8,88,.98);color:#fff;box-shadow:0 5px 20px rgba(22,0,54,.12)}.nav-wrap{max-width:1190px;margin:auto;min-height:78px;padding:0 24px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:10px;white-space:nowrap}.brand-symbol{width:36px;height:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:3px;transform:rotate(-4deg)}.brand-symbol span{border:2.4px solid #fff;border-radius:50%}.brand-name{font-weight:850;letter-spacing:.04em;font-size:22px;line-height:1}.brand-name small{display:block;font-size:9px;font-weight:650;letter-spacing:.17em;color:#d8c9f5;margin-top:5px}.nav-links{display:flex;align-items:center;gap:25px;margin-left:auto}.nav-links a{font-size:13px;font-weight:650;color:#f2edf9;transition:color .2s}.nav-links a:hover{color:var(--blue)}.nav-actions{display:flex;gap:10px;align-items:center}.btn{border:0;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:13px 19px;border-radius:999px;font-weight:760;font-size:13px;transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-red{background:var(--red);color:white;box-shadow:0 7px 20px rgba(227,24,55,.2)}.btn-red:hover{background:#c91530}.btn-white{background:#fff;color:var(--purple)}.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff}.btn-purple{background:var(--purple);color:#fff}.btn-soft{background:#eee7fb;color:var(--purple)}.menu-toggle{display:none;background:transparent;color:#fff;border:1px solid #ffffff55;border-radius:12px;width:42px;height:42px;font-size:21px;cursor:pointer}
+.hero{background:var(--purple);color:#fff;position:relative;overflow:hidden;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(28,5,69,.96) 0%,rgba(37,8,88,.86) 42%,rgba(37,8,88,.23) 100%),url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1900&q=85') center/cover no-repeat}.hero:after{content:"";position:absolute;right:-150px;bottom:-300px;width:700px;height:700px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 70px #ffffff08,0 0 0 140px #ffffff05;z-index:-1}.hero-inner{max-width:1190px;margin:auto;padding:78px 24px 84px;display:grid;grid-template-columns:1.05fr .8fr;gap:60px;align-items:center;min-height:535px}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}.eyebrow:before{content:"";width:22px;height:2px;background:currentColor}.hero h1{font-size:clamp(42px,5vw,66px);letter-spacing:-.055em;line-height:1.02;margin:18px 0 22px;max-width:630px;font-weight:850}.hero h1 em{font-style:normal;color:var(--blue)}.hero-copy{font-size:17px;color:#e4dcef;max-width:520px;line-height:1.7;margin:0 0 27px}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px}.hero-note{font-size:11px;color:#d0c2e2;margin-top:20px}.booking-card{background:#fff;color:var(--ink);border-radius:26px;padding:27px;box-shadow:0 24px 70px #1600335c;max-width:430px;justify-self:end;width:100%;position:relative}.booking-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:20px}.booking-top h2{margin:0;font-size:23px;line-height:1.15;color:var(--purple);letter-spacing:-.035em}.booking-top p{margin:7px 0 0;font-size:12px;color:var(--muted)}.mini-tag{background:#e9fbff;color:#087f9a;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:850;white-space:nowrap}.field{display:block;margin:14px 0}.field span{display:block;font-weight:750;font-size:12px;margin-bottom:7px;color:#40384d}.field select,.field input{width:100%;border:1px solid #dcd5e5;background:#fff;padding:13px 13px;border-radius:11px;color:#31283f;outline:none}.field select:focus,.field input:focus{border-color:#7f4bd0;box-shadow:0 0 0 3px #7f4bd01c}.booking-submit{width:100%;margin-top:6px}.booking-help{font-size:10px;color:#81798b;text-align:center;margin:12px 0 0}
+.trust-row{max-width:1190px;margin:-1px auto 0;padding:23px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-bottom:1px solid var(--line)}.trust-item{display:flex;align-items:center;gap:12px}.trust-icon{width:43px;height:43px;border-radius:14px;background:#f0e9fc;color:var(--purple);display:grid;place-items:center;font-size:21px;flex-shrink:0}.trust-item strong{display:block;font-size:12px;color:var(--purple)}.trust-item small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
+.section{padding:82px 24px}.section.alt{background:#f8f6fc}.container{max-width:1140px;margin:auto}.section-heading{max-width:680px;margin-bottom:32px}.section-heading.center{text-align:center;margin-left:auto;margin-right:auto}.section-kicker{font-size:11px;color:#7338ba;font-weight:850;letter-spacing:.15em;text-transform:uppercase}.section h2{font-size:clamp(30px,3.5vw,43px);letter-spacing:-.045em;line-height:1.12;color:var(--purple);margin:11px 0 14px}.section-heading p{font-size:15px;color:var(--muted);margin:0;line-height:1.75}.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.test-card{border:1px solid var(--line);border-radius:20px;padding:25px;background:#fff;display:flex;flex-direction:column;min-height:285px;transition:transform .2s,box-shadow .2s}.test-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.card-icon{width:53px;height:53px;border-radius:17px;background:#fbebef;color:var(--red);display:grid;place-items:center;font-size:23px;margin-bottom:22px}.test-card:nth-child(2) .card-icon{background:#e7fafe;color:#0586a7}.test-card:nth-child(3) .card-icon{background:#eee8fb;color:#6236a5}.test-card h3{font-size:20px;color:var(--purple);margin:0 0 9px;letter-spacing:-.03em}.test-card p{color:var(--muted);font-size:13px;margin:0 0 24px;line-height:1.7}.text-link{color:#6030a2;font-weight:800;font-size:12px;display:inline-flex;align-items:center;gap:8px;margin-top:auto}.text-link span{font-size:18px;transition:transform .2s}.text-link:hover span{transform:translateX(4px)}
+.prep-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}.prep-visual{min-height:435px;border-radius:28px;background:linear-gradient(145deg,#e2f8fc,#d8c9f7);position:relative;overflow:hidden;padding:28px;display:flex;align-items:flex-end}.prep-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(34,6,78,.72),transparent 68%),url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=85') center/cover}.prep-callout{position:relative;color:white;max-width:300px}.prep-callout .number{font-size:12px;letter-spacing:.12em;font-weight:800;color:#a7f3ff}.prep-callout h3{font-size:30px;line-height:1.15;letter-spacing:-.04em;margin:10px 0}.prep-callout p{font-size:12px;color:#eee6f7;margin:0}.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px}.skill-card{border:1px solid var(--line);border-radius:17px;padding:20px;background:#fff;transition:border .2s,transform .2s}.skill-card:hover{border-color:#b9a1df;transform:translateY(-2px)}.skill-symbol{font-size:20px;color:var(--red)}.skill-card h3{font-size:16px;color:var(--purple);margin:8px 0 5px}.skill-card p{font-size:11px;color:var(--muted);line-height:1.65;margin:0 0 12px}.skill-card button{border:0;padding:0;background:transparent;color:#6336a6;font-size:11px;font-weight:850;cursor:pointer}
+.ready-band{background:var(--purple);color:#fff;overflow:hidden;position:relative}.ready-band:after{content:"";position:absolute;width:400px;height:400px;border:1px solid #ffffff23;border-radius:50%;right:-90px;top:-200px;box-shadow:0 0 0 45px #ffffff06,0 0 0 90px #ffffff05}.ready-inner{max-width:1140px;margin:auto;padding:62px 24px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;position:relative;z-index:1}.ready-inner h2{font-size:clamp(29px,3vw,40px);letter-spacing:-.045em;line-height:1.12;margin:10px 0;color:#fff}.ready-inner p{max-width:670px;color:#ddd4ed;font-size:14px;line-height:1.75;margin:0}.ready-inner .btn{white-space:nowrap}.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}.step{padding:22px 18px;border-top:2px solid #cfc0e9;position:relative}.step-number{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--purple);color:#fff;font-size:13px;font-weight:850;margin-top:-42px;margin-bottom:17px;box-shadow:0 0 0 6px #fff}.step h3{font-size:16px;color:var(--purple);margin:0 0 9px}.step p{font-size:12px;color:var(--muted);line-height:1.75;margin:0}
+.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:65px;align-items:start}.faq-intro p{color:var(--muted);font-size:14px;line-height:1.8}.faq-list{border-top:1px solid var(--line)}.faq-item{border-bottom:1px solid var(--line)}.faq-question{background:transparent;width:100%;border:0;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:20px 0;color:var(--purple);font-weight:780;font-size:14px;cursor:pointer}.faq-question span:last-child{font-size:23px;color:var(--red);transition:transform .2s}.faq-answer{display:none;color:var(--muted);font-size:13px;line-height:1.75;padding:0 35px 20px 0}.faq-item.open .faq-answer{display:block}.faq-item.open .faq-question span:last-child{transform:rotate(45deg)}
+.footer{background:#1d0647;color:#fff;padding:45px 24px 20px}.footer-inner{max-width:1140px;margin:auto}.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;padding-bottom:32px;border-bottom:1px solid #ffffff25}.footer-brand p{font-size:12px;color:#c8badf;max-width:340px;line-height:1.8}.footer-links{display:flex;flex-wrap:wrap;gap:16px 24px;font-size:12px;color:#e0d6ef}.footer-links a:hover{color:var(--blue)}.footer-bottom{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-top:18px;font-size:10px;color:#b4a4d0}.footer-bottom a{text-decoration:underline;text-underline-offset:3px}
+/* modal and interactive states */
+.modal-backdrop{position:fixed;inset:0;background:rgba(19,4,43,.72);z-index:80;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px)}.modal-backdrop.show{display:flex}.modal{background:#fff;border-radius:24px;padding:28px;width:min(100%,530px);max-height:90vh;overflow:auto;box-shadow:0 30px 90px #10002080;position:relative;animation:pop .2s ease-out}.modal-close{position:absolute;top:15px;right:15px;width:36px;height:36px;border:0;border-radius:50%;background:#f1edf6;color:var(--purple);font-size:22px;cursor:pointer}.modal-kicker{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#7b48b9;font-weight:850}.modal h2{font-size:29px;line-height:1.12;letter-spacing:-.04em;color:var(--purple);margin:9px 35px 10px 0}.modal p{font-size:13px;color:var(--muted);line-height:1.7}.modal .field{margin:14px 0}.modal-message{background:#f4effb;border-radius:14px;padding:14px;font-size:12px;color:#49306a;margin-top:15px;display:none}.modal-message.show{display:block}.sample-question{background:#f8f5fc;border-radius:14px;padding:16px;margin:15px 0}.sample-question strong{font-size:14px;display:block;color:var(--purple);margin-bottom:12px}.answer-option{display:block;width:100%;text-align:left;background:white;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin:8px 0;color:#40384d;cursor:pointer;font-size:12px}.answer-option:hover{border-color:#9872c9}.answer-option.correct{border-color:#16865e;background:#eafff6}.answer-option.wrong{border-color:#d7354b;background:#fff0f2}.result-note{font-size:12px;font-weight:700;margin-top:10px}.no-scroll{overflow:hidden}@keyframes pop{from{transform:translateY(8px) scale(.98);opacity:.5}to{transform:none;opacity:1}}
+@media(max-width:930px){.nav-wrap{gap:15px}.nav-links{gap:14px}.nav-links a{font-size:12px}.hero-inner{gap:30px;grid-template-columns:1fr .86fr}.hero h1{font-size:52px}.booking-card{padding:22px}.prep-layout{gap:35px}.faq-grid{gap:35px}}
+@media(max-width:760px){.nav-wrap{min-height:68px;padding:0 18px}.brand-name{font-size:19px}.menu-toggle{display:block;margin-left:auto}.nav-actions .btn{display:none}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:16px 22px 24px;background:var(--purple);flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #ffffff25;box-shadow:0 18px 25px #1c00442b}.nav-links.open{display:flex}.nav-links a{padding:13px 0;border-bottom:1px solid #ffffff16;font-size:14px}.hero-inner{grid-template-columns:1fr;padding:55px 20px 48px;gap:35px}.hero h1{font-size:clamp(42px,12vw,58px)}.hero-copy{font-size:15px}.booking-card{justify-self:stretch;max-width:none}.trust-row{grid-template-columns:repeat(2,1fr);padding:20px;gap:17px}.section{padding:61px 20px}.test-grid{grid-template-columns:1fr}.test-card{min-height:auto}.test-card p{margin-bottom:20px}.prep-layout{grid-template-columns:1fr;gap:30px}.prep-visual{min-height:340px}.ready-inner{grid-template-columns:1fr;padding:47px 20px}.ready-inner .btn{justify-self:start}.steps-grid{grid-template-columns:repeat(2,1fr);row-gap:40px}.faq-grid{grid-template-columns:1fr;gap:15px}.footer-top{flex-direction:column}.footer-links{gap:14px 20px}}
+@media(max-width:420px){.demo-strip{font-size:10px;flex-wrap:wrap;gap:4px}.brand-symbol{width:29px;height:29px}.brand-name{font-size:17px}.hero-buttons .btn{width:100%}.booking-card{padding:20px}.booking-top h2{font-size:21px}.trust-row{gap:16px 10px}.trust-item{gap:9px}.trust-icon{width:36px;height:36px;font-size:17px}.trust-item strong{font-size:11px}.trust-item small{font-size:9px}.skill-grid{gap:10px}.skill-card{padding:14px}.steps-grid{grid-template-columns:1fr}.step{margin-left:8px}.modal{padding:23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+/* ===== Test & results section ===== */
+#results{padding:0;background:#e6eef8;color:var(--ink)}
+#results.rs-detail{background:#fff}
+.rs-banner{background:linear-gradient(100deg,#250858,#3a1a85);color:#fff;padding:54px 24px 46px}
+.rs-banner-in{max-width:900px;margin:auto}
+.rs-banner h2{color:#fff;margin:0 0 10px;font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;line-height:1.1}
+.rs-banner p{margin:0;max-width:560px;color:#e4dcef;font-size:16px;line-height:1.7}
+.rs-demo-note{display:inline-block;margin-top:16px;background:#ffffff1f;border-radius:999px;padding:5px 13px;font-size:12px;font-weight:700}
+.rs-wrap{max-width:900px;margin:auto;padding:44px 24px 70px}
+.rs-h{font-size:26px;color:var(--purple);margin:0 0 18px;letter-spacing:-.02em;line-height:1.25}
+.rs-wrap .rs-h:not(:first-child){margin-top:38px}
+.rs-card{background:#fff;border-radius:14px;padding:30px 34px;box-shadow:0 3px 12px rgba(20,30,60,.16);margin-bottom:22px}
+.rs-card p{margin:0 0 22px;font-size:18px;color:#444;line-height:1.7}
+.rs-card-h{margin:0 0 10px;font-size:20px;color:var(--purple)}
+.rs-btn{display:inline-flex;justify-content:center;align-items:center;border:0;cursor:pointer;background:#0b56b3;color:#fff;font-weight:800;font-size:16px;padding:17px 44px;border-radius:999px;transition:background .2s}
+.rs-btn:hover{background:#08408a}
+.rs-btn.rs-block{display:flex;width:100%}
+.rs-btn.rs-outline{background:#fff;color:#0b56b3;border:2px solid #0b56b3}
+.rs-btn.rs-outline:hover{background:#eef4fc}
+.rs-btn:focus-visible,.rs-tab:focus-visible,.rs-link:focus-visible,.rs-test-title:focus-visible,.rs-back:focus-visible{outline:3px solid #13c3e8;outline-offset:3px}
+.rs-test{display:grid;grid-template-columns:1fr auto;gap:10px 24px;align-items:start}
+.rs-test .rs-btn{grid-column:1/-1;margin-top:14px}
+.rs-test-title{font-family:inherit;font-size:28px;font-weight:850;color:#0b56b3;text-decoration:underline;background:none;border:0;padding:0;cursor:pointer;text-align:left;line-height:1.2}
+.rs-test-date{font-weight:800;font-size:20px;margin:18px 0 8px;color:#333}
+.rs-meta{display:flex;gap:10px;align-items:center;color:#555;font-size:18px;margin:6px 0}
+.rs-meta .rs-ico{stroke:#555;width:26px;height:26px}
+.rs-score-box{text-align:center;color:#555;font-size:18px}
+.rs-ring{display:inline-grid;place-items:center;width:92px;height:92px;border:11px solid #0a7d32;border-radius:50%;background:#fff;font-weight:850;font-size:40px;color:var(--purple);margin-top:6px;line-height:1}
+.rs-ring.rs-ring-lg{width:128px;height:128px;border-width:14px;font-size:54px;margin:0}
+.rs-back{font-family:inherit;background:none;border:0;color:#0b56b3;font-weight:700;font-size:15px;cursor:pointer;padding:0 0 18px;text-decoration:underline}
+.rs-head{max-width:900px;margin:auto;padding:34px 24px 28px}
+.rs-head h2{margin:0 0 22px;font-size:clamp(24px,3.4vw,34px);color:var(--purple);letter-spacing:-.02em;line-height:1.2}
+.rs-head-grid{display:flex;justify-content:space-between;gap:12px 30px;flex-wrap:wrap;color:#444;font-size:18px}
+.rs-head-grid p{margin:0 0 4px}
+.rs-head-right{text-align:right;font-size:16px}
+.rs-shell{max-width:900px;margin:0 auto;padding:0 24px 70px}
+.rs-tabs{display:flex;overflow-x:auto;border-top:1px solid var(--line)}
+.rs-tab{font-family:inherit;flex:1 0 auto;background:none;border:0;border-top:3px solid transparent;margin-top:-1px;padding:30px 18px;font-size:18px;color:#0b56b3;cursor:pointer;text-align:center;white-space:nowrap}
+.rs-tab[aria-selected="true"]{border-top-color:var(--purple);background:#e6eef8;color:#222;text-decoration:underline}
+.rs-panel{background:#e6eef8;padding:36px 32px 44px}
+.rs-overall{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;margin-bottom:34px}
+.rs-overall-label{font-size:24px;color:#444;line-height:1.3}
+.rs-link{font-family:inherit;background:none;border:0;color:#0b56b3;font-weight:800;font-size:22px;text-decoration:underline;cursor:pointer;text-align:right;line-height:1.35;padding:0}
+.rs-dots{border:0;border-top:4px dotted #b6bfcc;margin:38px 0}
+.rs-row{display:flex;align-items:center;gap:16px;background:#fff;border-radius:12px;padding:20px 22px;margin-bottom:14px;box-shadow:0 2px 8px rgba(20,30,60,.12);font-size:20px;color:#444}
+.rs-row-score{margin-left:auto}
+.rs-row.rs-total{font-weight:800;color:#222}
+.rs-ico{width:30px;height:30px;flex:none;fill:none;stroke:#d6204a;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rs-explain{font-size:18px;color:#555;line-height:1.8;margin:22px 0 26px}
+.rs-improve{border-left:5px solid #0b56b3;padding:6px 0 6px 20px;margin:0 0 38px}
+.rs-improve strong{display:block;margin-bottom:12px;color:#333;font-size:18px}
+.rs-improve p{margin:0;color:#555;font-size:18px;line-height:1.8}
+.rs-kv{display:grid;grid-template-columns:minmax(120px,220px) 1fr;gap:16px 24px;margin:0;font-size:18px}
+.rs-kv dt{font-weight:800;color:#333}
+.rs-kv dd{margin:0;color:#555}
+.rs-empty{font-size:20px;color:#444;margin:0 0 24px}
+@media(max-width:700px){.rs-wrap{padding:32px 16px 50px}.rs-card{padding:22px 20px}.rs-test-title{font-size:22px}.rs-ring{width:72px;height:72px;border-width:9px;font-size:30px}.rs-overall{grid-template-columns:1fr;text-align:center;justify-items:center}.rs-link{text-align:center}.rs-head,.rs-shell{padding-left:16px;padding-right:16px}.rs-head-right{text-align:left}.rs-tab{padding:20px 14px;font-size:16px}.rs-panel{padding:24px 16px 32px}.rs-kv{grid-template-columns:1fr;gap:2px}.rs-kv dd{margin-bottom:14px}.rs-row{font-size:17px;padding:16px}}
+</style>
+</head>
+<body>
+<div class="demo-strip"><span>STUDENT PROJECT · INTERACTIVE DEMO</span><span>—</span><span>Not an official British Council website.</span><a href="https://www.britishcouncil.org.bd/en/exam/ielts" target="_blank" rel="noopener">Visit the official IELTS page ↗</a></div>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="IELTS demo home"><span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span class="brand-name">IELTS<small>YOUR NEXT CHAPTER</small></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#tests">Choose your test</a><a href="#prepare">Prepare</a><a href="#journey">Your journey</a><a href="#faq">Help & FAQs</a><a href="#results" id="resultsLink">Test &amp; results</a>
+    </nav>
+    <div class="nav-actions"><button class="btn btn-outline" data-open-login>Log in</button><button class="btn btn-red" data-open-reservation>Reserve a test <span aria-hidden="true">↗</span></button></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow">Your future speaks English</span>
+        <h1>Open doors to your <em>future.</em></h1>
+        <p class="hero-copy">Study abroad, explore new opportunities, or take the next step in your career. Start with IELTS and move towards the future you have in mind.</p>
+        <div class="hero-buttons"><a class="btn btn-red" href="#tests">Find your IELTS test <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="#prepare">Explore preparation</a></div>
+        <div class="hero-note">A student-built website concept inspired by public IELTS information.</div>
+      </div>
+      <form class="booking-card" id="quickBookForm">
+        <div class="booking-top"><div><h2>Find your IELTS test</h2><p>Choose the test that fits your goal.</p></div><span class="mini-tag">DEMO BOOKING</span></div>
+        <label class="field"><span>What is your goal?</span><select id="heroTestType"><option>IELTS Academic</option><option>IELTS General Training</option><option>IELTS for UKVI</option></select></label>
+        <label class="field"><span>Where would you like to take it?</span><select id="heroLocation"><option>Dhaka, Bangladesh</option><option>Chattogram, Bangladesh</option><option>Sylhet, Bangladesh</option><option>Rajshahi, Bangladesh</option><option>Another location</option></select></label>
+        <label class="field"><span>Preferred format</span><select id="heroFormat"><option>IELTS on computer</option><option>Not sure yet</option><option>Check available formats</option></select></label>
+        <button type="submit" class="btn btn-red booking-submit">Continue <span aria-hidden="true">→</span></button>
+        <p class="booking-help">This demo does not check live test dates or create bookings.</p>
+      </form>
+    </div>
+  </section>
+  <div class="trust-row" aria-label="IELTS test features">
+    <div class="trust-item"><span class="trust-icon">◎</span><div><strong>Study and work</strong><small>Show your English ability</small></div></div>
+    <div class="trust-item"><span class="trust-icon">✦</span><div><strong>Four core skills</strong><small>Listening, Reading, Writing, Speaking</small></div></div>
+    <div class="trust-item"><span class="trust-icon">▣</span><div><strong>Find your test</strong><small>Choose the right test type</small></div></div>
+    <div class="trust-item"><span class="trust-icon">↗</span><div><strong>Prepare with purpose</strong><small>Practise before test day</small></div></div>
+  </div>
+<section class="section alt" id="results" hidden>
+  <div id="resultsApp"></div>
+</section>
+  <section class="section" id="tests">
+    <div class="container">
+      <div class="section-heading"><span class="section-kicker">Choose your path</span><h2>Which IELTS test is right for you?</h2><p>Start by thinking about why you need an English test. Your destination, organisation, or visa route may determine which IELTS test you need.</p></div>
+      <div class="test-grid">
+        <article class="test-card"><div class="card-icon">♧</div><h3>IELTS Academic</h3><p>For people applying to higher education or professional registration where academic-level English is needed.</p><button class="text-link" data-test="IELTS Academic">Explore Academic <span>→</span></button></article>
+        <article class="test-card"><div class="card-icon">▣</div><h3>IELTS General Training</h3><p>For people moving to an English-speaking country for work, training, or other eligible migration routes.</p><button class="text-link" data-test="IELTS General Training">Explore General Training <span>→</span></button></article>
+        <article class="test-card"><div class="card-icon">⌂</div><h3>IELTS for UKVI</h3><p>A test option for certain UK visa and immigration applications. Check the exact requirements for your route.</p><button class="text-link" data-test="IELTS for UKVI">Explore UKVI <span>→</span></button></article>
+      </div>
+    </div>
+  </section>
+  <section class="section alt" id="prepare">
+    <div class="container prep-layout">
+      <div class="prep-visual"><div class="prep-callout"><div class="number">YOUR PREPARATION PLAN · 01</div><h3>Build your skills. Grow your confidence.</h3><p>Small, regular practice can help you feel more prepared for test day.</p></div></div>
+      <div><div class="section-heading" style="margin-bottom:0"><span class="section-kicker">Prepare with purpose</span><h2>Every skill takes you one step further.</h2><p>Get familiar with each part of the test, try sample questions, and notice which skills need more practice.</p></div>
+        <div class="skill-grid">
+          <article class="skill-card"><div class="skill-symbol">♫</div><h3>Listening</h3><p>Practise understanding conversations and spoken information.</p><button data-practice="Listening">Try a sample question →</button></article>
+          <article class="skill-card"><div class="skill-symbol">▤</div><h3>Reading</h3><p>Build the habit of finding key information in a text.</p><button data-practice="Reading">Try a sample question →</button></article>
+          <article class="skill-card"><div class="skill-symbol">✎</div><h3>Writing</h3><p>Organise your ideas and answer prompts clearly.</p><button data-practice="Writing">View a practice tip →</button></article>
+          <article class="skill-card"><div class="skill-symbol">◖</div><h3>Speaking</h3><p>Practise giving clear answers and explaining your ideas.</p><button data-practice="Speaking">View a practice tip →</button></article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ready-band"><div class="ready-inner"><div><span class="eyebrow">Your preparation starts here</span><h2>Feel ready before test day.</h2><p>Use practice questions to understand the test format, set a realistic goal, and build a study routine that works for you.</p></div><button class="btn btn-white" data-practice="Mixed skills">Try a quick practice quiz <span aria-hidden="true">→</span></button></div></section>
+  <section class="section" id="journey">
+    <div class="container"><div class="section-heading center"><span class="section-kicker">A clear plan</span><h2>Your IELTS journey, step by step.</h2><p>Knowing what comes next can make the process feel easier to manage.</p></div>
+      <div class="steps-grid"><article class="step"><div class="step-number">01</div><h3>Know your goal</h3><p>Confirm why you need IELTS and which test type your organisation or destination requires.</p></article><article class="step"><div class="step-number">02</div><h3>Understand the test</h3><p>Learn how Listening, Reading, Writing, and Speaking are assessed.</p></article><article class="step"><div class="step-number">03</div><h3>Practise regularly</h3><p>Use sample questions, check your progress, and focus on areas to improve.</p></article><article class="step"><div class="step-number">04</div><h3>Book through the official site</h3><p>Check current locations, dates, requirements, and fees before registering.</p></article></div>
+    </div>
+  </section>
+  <section class="section alt" id="faq"><div class="container faq-grid"><div class="faq-intro"><span class="section-kicker">Need a little help?</span><h2>Frequently asked questions.</h2><p>Here are a few basics to help you get started. Always confirm current requirements with the official IELTS provider.</p><a class="btn btn-purple" href="https://www.britishcouncil.org.bd/en/exam/ielts/book-test" target="_blank" rel="noopener">Official booking information ↗</a></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What is the difference between Academic and General Training?</span><span>＋</span></button><div class="faq-answer">IELTS Academic is commonly used for higher education and some professional registration. General Training is commonly used for work, training, and some migration purposes. The correct choice depends on the specific organisation or application.</div></div>
+      <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What skills are tested in IELTS?</span><span>＋</span></button><div class="faq-answer">IELTS assesses four skills: Listening, Reading, Writing, and Speaking. The exact test content and timing depend on the test type.</div></div>
+      <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can I book a test using this demo website?</span><span>＋</span></button><div class="faq-answer">No. This is a student demo for presentation purposes only. It does not check live availability, collect payments, store your details, or create an IELTS booking. Use the official British Council website for real registration.</div></div>
+      <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Where can I check the latest fees and dates?</span><span>＋</span></button><div class="faq-answer">Fees, availability, locations, and rules can change. Use the official British Council IELTS page for Bangladesh to check the latest details before making a decision.</div></div>
+    </div>
+  </div></section>
+</main>
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span class="brand-name">IELTS<small>YOUR NEXT CHAPTER</small></span></a><p>A student-created interface concept for an IELTS information and preparation website. This project is independent and is not endorsed by or affiliated with the British Council.</p></div><div class="footer-links"><a href="#tests">Choose your test</a><a href="#prepare">Preparation</a><a href="#journey">Your journey</a><a href="#faq">FAQs</a><a href="https://www.britishcouncil.org.bd/en/exam/ielts" target="_blank" rel="noopener">Official IELTS site ↗</a></div></div><div class="footer-bottom"><span>© 2026 Student demo website · For classroom presentation only</span><span>No real bookings, payments, or personal data collection.</span></div></div></footer>
+
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="modalContent"><button class="modal-close" id="modalClose" aria-label="Close dialog">×</button><div id="modalBody"></div></div>
+</div>
+<script>
+const backdrop=document.getElementById('modalBackdrop');const modalBody=document.getElementById('modalBody');const navLinks=document.getElementById('navLinks');const menuToggle=document.getElementById('menuToggle');
+function openModal(html){modalBody.innerHTML=html;backdrop.classList.add('show');document.body.classList.add('no-scroll');const focusable=modalBody.querySelector('button,select,input,a');if(focusable) setTimeout(()=>focusable.focus(),30)}
+function closeModal(){backdrop.classList.remove('show');document.body.classList.remove('no-scroll')}
+document.getElementById('modalClose').addEventListener('click',closeModal);backdrop.addEventListener('click',e=>{if(e.target===backdrop)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+menuToggle.addEventListener('click',()=>{const isOpen=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(isOpen));menuToggle.textContent=isOpen?'×':'☰'});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰'}));
+function bookingModal(test='IELTS Academic',location='Dhaka, Bangladesh',format='IELTS on computer'){openModal(`<div class="modal-kicker">Student website demo</div><h2 id="modalTitle">Plan your IELTS booking</h2><p>Review your choices below. This is a presentation demo, so it will not book a real test or take payment.</p><form id="demoBookingForm"><label class="field"><span>Test type</span><select id="modalTest"><option ${test==='IELTS Academic'?'selected':''}>IELTS Academic</option><option ${test==='IELTS General Training'?'selected':''}>IELTS General Training</option><option ${test==='IELTS for UKVI'?'selected':''}>IELTS for UKVI</option></select></label><label class="field"><span>Location</span><select id="modalLocation">${['Dhaka, Bangladesh','Chattogram, Bangladesh','Sylhet, Bangladesh','Rajshahi, Bangladesh','Another location'].map(x=>`<option ${x===location?'selected':''}>${x}</option>`).join('')}</select></label><label class="field"><span>Format preference</span><select id="modalFormat">${['IELTS on computer','Not sure yet','Check available formats'].map(x=>`<option ${x===format?'selected':''}>${x}</option>`).join('')}</select></label><button class="btn btn-red" type="submit" style="width:100%">Preview demo booking →</button></form><div id="bookingMessage" class="modal-message"></div><p style="font-size:11px;margin-bottom:0">For real dates, prices and registration, use the <a style="color:#6132a0;text-decoration:underline" href="https://www.britishcouncil.org.bd/en/exam/ielts/book-test" target="_blank" rel="noopener">official British Council booking page ↗</a>.</p>`);
+ document.getElementById('demoBookingForm').addEventListener('submit',e=>{e.preventDefault();const t=document.getElementById('modalTest').value;const l=document.getElementById('modalLocation').value;const f=document.getElementById('modalFormat').value;const msg=document.getElementById('bookingMessage');msg.innerHTML=`<strong>Demo summary ready.</strong><br>Test: ${t}<br>Location: ${l}<br>Preference: ${f}<br><br><strong>No real booking was made.</strong> This information stays in this page and is not sent to a server.`;msg.classList.add('show');msg.scrollIntoView({block:'nearest',behavior:'smooth'})});}
+document.querySelectorAll('[data-open-book]').forEach(b=>b.addEventListener('click',()=>bookingModal()));
+// Real demo authentication: the browser talks to the local Express server.
+let currentUser = null;
+
+/* ==========================================================
+   FIREBASE SETUP  (replaces the old Node/Express backend)
+   Step 1: Paste YOUR firebaseConfig from the Firebase console
+           between the { } below (keep the quote marks).
+   ========================================================== */
+const firebaseConfig = {
+  apiKey: "AIzaSyCYHeVyXptXlJCuKB6Zh41hz8zGb4V3Um8",
+  authDomain: "ielts-36a7d.firebaseapp.com",
+  projectId: "ielts-36a7d",
+  storageBucket: "ielts-36a7d.firebasestorage.app",
+  messagingSenderId: "336209070747",
+  appId: "1:336209070747:web:81623ed78773f1724f543e",
+  measurementId: "G-05CFFE6S0S"
+};
+/* ===================== END OF FIREBASE SETUP ===================== */
+
+const FIREBASE_VERSION = '12.13.0';
+const fbReady = (async () => {
+  if (!firebaseConfig.apiKey || firebaseConfig.apiKey.indexOf('PASTE') === 0) {
+    throw new Error('Firebase is not set up yet. Paste your firebaseConfig into index.html.');
+  }
+  const base = 'https://www.gstatic.com/firebasejs/' + FIREBASE_VERSION + '/';
+  const [appM, authM, fsM] = await Promise.all([
+    import(base + 'firebase-app.js'),
+    import(base + 'firebase-auth.js'),
+    import(base + 'firebase-firestore.js')
+  ]);
+  const app = appM.initializeApp(firebaseConfig);
+  return { auth: authM.getAuth(app), db: fsM.getFirestore(app), A: authM, F: fsM };
+})();
+fbReady.catch(() => {});
+
+function fbErrorMessage(e) {
+  const known = {
+    'auth/email-already-in-use': 'An account with this email already exists. Please log in.',
+    'auth/invalid-email': 'Enter a valid email address.',
+    'auth/weak-password': 'Your password must be at least 8 characters long.',
+    'auth/invalid-credential': 'Email or password is incorrect.',
+    'auth/user-not-found': 'Email or password is incorrect.',
+    'auth/wrong-password': 'Email or password is incorrect.',
+    'auth/too-many-requests': 'Too many attempts. Wait a few minutes and try again.',
+    'auth/network-request-failed': 'Network problem. Check your internet and try again.',
+    'auth/operation-not-allowed': 'Email/password sign-in is not turned on in Firebase yet.',
+    'auth/unauthorized-domain': 'This website address is not allowed yet. In Firebase go to Authentication > Settings > Authorized domains and add it.',
+    'permission-denied': 'Firebase blocked this action. Check the Firestore rules.',
+    'unavailable': 'Could not reach Firebase. Check your internet and try again.'
+  };
+  if (e && e.code && known[e.code]) return known[e.code];
+  if (e && !e.code && e.message) return e.message;
+  console.error(e);
+  return 'Something went wrong. Please try again.';
+}
+function fbUser(u) {
+  return {
+    id: u.uid,
+    name: u.displayName || String(u.email || 'Student').split('@')[0],
+    email: u.email,
+    createdAt: (u.metadata && u.metadata.creationTime) || new Date().toISOString()
+  };
+}
+
+/* The rest of the website still calls apiRequest(...). This version talks to Firebase instead of server.js. */
+async function apiRequest(url, options = {}) {
+  try {
+    const fb = await fbReady;
+    const body = options.body ? JSON.parse(options.body) : {};
+
+    if (url === '/api/register') {
+      const name = String(body.name || '').trim();
+      const email = String(body.email || '').trim().toLowerCase();
+      const password = String(body.password || '');
+      if (name.length < 2 || name.length > 70) throw new Error('Enter a name between 2 and 70 characters.');
+      if (password.length < 8 || password.length > 72) throw new Error('Your password must be 8–72 characters long.');
+      const cred = await fb.A.createUserWithEmailAndPassword(fb.auth, email, password);
+      await fb.A.updateProfile(cred.user, { displayName: name });
+      return { message: 'Account created successfully.', user: fbUser(cred.user) };
+    }
+
+    if (url === '/api/login') {
+      const email = String(body.email || '').trim().toLowerCase();
+      const cred = await fb.A.signInWithEmailAndPassword(fb.auth, email, String(body.password || ''));
+      return { message: 'You are now logged in.', user: fbUser(cred.user) };
+    }
+
+    if (url === '/api/me') {
+      await fb.auth.authStateReady();
+      const u = fb.auth.currentUser;
+      if (!u) return { user: null };
+      let reservations = [];
+      try {
+        const snap = await fb.F.getDocs(fb.F.query(fb.F.collection(fb.db, 'reservations'), fb.F.where('userId', '==', u.uid)));
+        reservations = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+          .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+      } catch (err) { console.warn('Could not load reservations:', err); }
+      return { user: fbUser(u), reservations };
+    }
+
+    if (url === '/api/logout') {
+      await fb.A.signOut(fb.auth);
+      return { message: 'Logged out.' };
+    }
+
+    if (url === '/api/reservations') {
+      await fb.auth.authStateReady();
+      const u = fb.auth.currentUser;
+      if (!u) throw new Error('Please log in first.');
+      const testType = String(body.testType || '').trim();
+      const city = String(body.city || '').trim();
+      const date = String(body.date || '').trim();
+      const format = String(body.format || '').trim();
+      const okTests = ['IELTS Academic', 'IELTS General Training', 'IELTS for UKVI Academic', 'IELTS for UKVI General Training'];
+      const okCities = ['Dhaka', 'Chattogram', 'Sylhet', 'Rajshahi', 'Khulna'];
+      const okFormats = ['IELTS on computer', 'Not sure yet'];
+      if (!okTests.includes(testType) || !okCities.includes(city) || !okFormats.includes(format) || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+        throw new Error('Check the test type, city, date, and format.');
+      }
+      const chosen = new Date(date + 'T00:00:00');
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      if (Number.isNaN(chosen.getTime()) || chosen < today) throw new Error('Choose today or a future date.');
+      await fb.F.addDoc(fb.F.collection(fb.db, 'reservations'), {
+        userId: u.uid, testType, city, date, format,
+        createdAt: new Date().toISOString(),
+        status: 'Demo request — not a real booking'
+      });
+      return { message: 'Your demo request was saved.' };
+    }
+
+    throw new Error('Unknown request: ' + url);
+  } catch (e) {
+    throw new Error(fbErrorMessage(e));
+  }
+}function showAuthMessage(text, isError = false) {
+  const el = document.getElementById('authMessage');
+  if (!el) return;
+  el.textContent = text;
+  el.style.display = 'block';
+  el.style.background = isError ? '#fff0f2' : '#eafff6';
+  el.style.color = isError ? '#a61b32' : '#145c43';
+}
+function authModal(mode = 'login') {
+  const isSignup = mode === 'register';
+  openModal(`<div class="modal-kicker">Student candidate area · Demo</div>
+    <h2 id="modalTitle">${isSignup ? 'Create your account' : 'Log in to your account'}</h2>
+    <p>${isSignup ? 'Create a demo candidate account. Your profile will be saved in the local project data file.' : 'Log in to view your saved profile and demo reservation requests.'}</p>
+    <form id="authForm">
+      ${isSignup ? '<label class="field"><span>Full name</span><input id="authName" type="text" minlength="2" maxlength="70" placeholder="Your full name" autocomplete="name" required></label>' : ''}
+      <label class="field"><span>Email address</span><input id="authEmail" type="email" maxlength="254" placeholder="student@example.com" autocomplete="email" required></label>
+      <label class="field"><span>Password</span><input id="authPassword" type="password" minlength="8" maxlength="72" placeholder="At least 8 characters" autocomplete="${isSignup ? 'new-password' : 'current-password'}" required></label>
+      ${isSignup ? '<p style="font-size:11px">Use a demo password of at least 8 characters. Passwords are hashed before they are saved.</p>' : ''}
+      <button class="btn btn-red" type="submit" style="width:100%">${isSignup ? 'Create account →' : 'Log in →'}</button>
+    </form>
+    <div id="authMessage" class="modal-message" role="status" aria-live="polite"></div>
+    <p style="margin-bottom:0">${isSignup ? 'Already have an account?' : 'New here?'} <button type="button" id="authSwitch" style="border:0;background:transparent;color:#6132a0;font-weight:800;cursor:pointer;text-decoration:underline">${isSignup ? 'Log in' : 'Create an account'}</button></p>
+    <p style="font-size:11px">This is a student demo, not an official British Council login. Do not use your real or reused password.</p>`);
+  document.getElementById('authSwitch').addEventListener('click', () => authModal(isSignup ? 'login' : 'register'));
+  document.getElementById('authForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const button = e.currentTarget.querySelector('button[type="submit"]');
+    button.disabled = true; button.textContent = isSignup ? 'Creating account…' : 'Logging in…';
+    try {
+      const body = { email: document.getElementById('authEmail').value.trim(), password: document.getElementById('authPassword').value };
+      if (isSignup) body.name = document.getElementById('authName').value.trim();
+      const result = await apiRequest(isSignup ? '/api/register' : '/api/login', { method: 'POST', body: JSON.stringify(body) });
+      currentUser = result.user;
+      updateLoginButton();
+      await dashboardModal();
+    } catch (error) {
+      showAuthMessage(error.message, true);
+    } finally {
+      const active = document.querySelector('#authForm button[type="submit"]');
+      if (active) { active.disabled = false; active.textContent = isSignup ? 'Create account →' : 'Log in →'; }
+    }
+  });
+}
+function loginModal() { if (currentUser) dashboardModal(); else authModal('login'); }
+function updateLoginButton() {
+  document.querySelectorAll('[data-open-login]').forEach(button => { button.textContent = currentUser ? 'My account' : 'Log in'; });
+}
+async function loadCurrentUser() {
+  try { const result = await apiRequest('/api/me', { method: 'GET', headers: {} }); currentUser = result.user; updateLoginButton(); }
+  catch (_) { currentUser = null; updateLoginButton(); }
+}
+async function dashboardModal() {
+  try {
+    const result = await apiRequest('/api/me', { method: 'GET', headers: {} });
+    if (!result.user) { currentUser = null; updateLoginButton(); authModal('login'); return; }
+    currentUser = result.user; updateLoginButton();
+    const user = result.user;
+    const reservations = result.reservations || [];
+    const reservationHtml = reservations.length ? reservations.slice().reverse().map(item => `<div style="border:1px solid #e5dfed;border-radius:14px;padding:13px;margin:10px 0"><strong>${escapeHtml(item.testType)}</strong><p style="margin:5px 0;font-size:12px">${escapeHtml(item.city)}, Bangladesh · ${escapeHtml(item.date)} · ${escapeHtml(item.format)}</p><span style="font-size:10px;color:#7b48b9">Saved demo request — not a real booking</span></div>`).join('') : '<p>No saved demo requests yet. You can create one using “Reserve a test”.</p>';
+    openModal(`<div class="modal-kicker">Candidate portal · Demo account</div><h2 id="modalTitle">Welcome, ${escapeHtml(user.name.split(' ')[0])}</h2><p>You are logged in as <strong>${escapeHtml(user.email)}</strong>.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0"><button class="btn btn-soft" id="accountTab" type="button">My account</button><button class="btn btn-soft" id="reservationsTab" type="button">My demo requests</button><button class="btn btn-red" id="dashboardReserve" type="button">Reserve a test</button></div>
+      <div id="dashboardPanel"><div style="background:#f8f6fc;border-radius:16px;padding:18px"><div style="font-size:10px;color:#7b48b9;font-weight:850;letter-spacing:.12em;text-transform:uppercase">Account overview</div><h3 style="color:#250858;margin:9px 0 5px">${escapeHtml(user.name)}</h3><p style="margin:0">${escapeHtml(user.email)}</p><p style="font-size:11px;margin-bottom:0">Account created: ${new Date(user.createdAt).toLocaleDateString()}</p></div><p style="font-size:11px">Your account is saved locally in this demo project. Sample IELTS scores are not stored or official.</p></div>
+      <button class="btn btn-purple" id="logoutButton" type="button" style="width:100%;margin-top:12px">Log out</button>
+      <p style="font-size:10px;margin-bottom:0">Demo only. No real IELTS result or booking is created.</p>`);
+    document.getElementById('accountTab').addEventListener('click', () => dashboardModal());
+    document.getElementById('reservationsTab').addEventListener('click', () => {
+      const panel = document.getElementById('dashboardPanel');
+      panel.innerHTML = `<h3 style="color:#250858">My demo requests</h3>${reservationHtml}`;
+    });
+    document.getElementById('dashboardReserve').addEventListener('click', () => reservationModal(user.email));
+    document.getElementById('logoutButton').addEventListener('click', async () => {
+      try { await apiRequest('/api/logout', { method: 'POST', body: '{}' }); currentUser = null; updateLoginButton(); closeModal(); loginModal(); }
+      catch (error) { const panel = document.getElementById('dashboardPanel'); if (panel) panel.innerHTML = `<p>${escapeHtml(error.message)}</p>`; }
+    });
+  } catch (error) { authModal('login'); showAuthMessage(error.message, true); }
+}
+function reservationModal(email='student@example.com'){openModal(`<div class="modal-kicker">Candidate area · Reservation demo</div><h2 id="modalTitle">Reserve your IELTS test</h2><p>Welcome, ${escapeHtml(email)}. Select your preferences to preview the next step. This is not a live booking system.</p><form id="demoReservationForm"><label class="field"><span>Test type</span><select id="reserveType"><option>IELTS Academic</option><option>IELTS General Training</option><option>IELTS for UKVI Academic</option><option>IELTS for UKVI General Training</option></select></label><label class="field"><span>Test location</span><select id="reserveCity"><option>Dhaka</option><option>Chattogram</option><option>Sylhet</option><option>Rajshahi</option><option>Khulna</option></select></label><label class="field"><span>Preferred test date</span><input id="reserveDate" type="date" min="${new Date().toISOString().slice(0,10)}" required></label><label class="field"><span>Test format</span><select id="reserveFormat"><option>IELTS on computer</option><option>Not sure yet</option></select></label><button class="btn btn-red" type="submit" style="width:100%">Review reservation →</button></form><div id="reservationMessage" class="modal-message"></div><p style="font-size:11px">Dates shown here are only your selected preference, not confirmed availability. For real dates and registration, use the <a style="color:#6132a0;text-decoration:underline" href="https://www.britishcouncil.org.bd/en/exam/ielts/book-test" target="_blank" rel="noopener">official booking page ↗</a>.</p>`);document.getElementById('demoReservationForm').addEventListener('submit',async e=>{e.preventDefault();const type=document.getElementById('reserveType').value,city=document.getElementById('reserveCity').value,date=document.getElementById('reserveDate').value,format=document.getElementById('reserveFormat').value;const msg=document.getElementById('reservationMessage');try{const result=await apiRequest('/api/reservations',{method:'POST',body:JSON.stringify({testType:type,city,date,format})});msg.innerHTML=`<strong>Demo request saved.</strong><br>Test: ${escapeHtml(type)}<br>Location: ${escapeHtml(city)}, Bangladesh<br>Preferred date: ${escapeHtml(date)}<br>Format: ${escapeHtml(format)}<br><br><strong>Status: Not booked — demo only.</strong>`;}catch(error){msg.innerHTML=`<strong>${escapeHtml(error.message)}</strong>${!currentUser?'<br><button type="button" class="btn btn-purple" id="loginToSaveReservation" style="margin-top:10px">Log in to save this request</button>':''}`;if(!currentUser){const loginButton=document.getElementById('loginToSaveReservation');if(loginButton)loginButton.addEventListener('click',()=>authModal('login'));}}msg.classList.add('show');msg.scrollIntoView({block:'nearest',behavior:'smooth'});});}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+document.querySelectorAll('[data-open-login]').forEach(b=>b.addEventListener('click',loginModal));document.querySelectorAll('[data-open-reservation]').forEach(b=>b.addEventListener('click',()=>{if(currentUser)reservationModal(currentUser.email);else authModal('login')}));loadCurrentUser();document.getElementById('quickBookForm').addEventListener('submit',e=>{e.preventDefault();bookingModal(document.getElementById('heroTestType').value,document.getElementById('heroLocation').value,document.getElementById('heroFormat').value)});document.querySelectorAll('[data-test]').forEach(b=>b.addEventListener('click',()=>bookingModal(b.dataset.test)));
+const practiceData={
+ 'Listening':{kind:'Sample listening strategy',q:'In a real Listening test, what is a useful thing to do before an audio recording starts?',opts:['Read the questions and look for key words','Skip the instructions','Write a long paragraph before listening'],correct:0,explain:'Correct. Use the time to read the questions and predict the kind of information you need. This demo question tests strategy, not listening ability.'},
+ 'Reading':{kind:'Sample reading question',q:'Read: “The library closes at 6 pm on weekdays, but at 4 pm on Saturdays.” When does it close on Saturday?',opts:['6 pm','4 pm','It stays open all night'],correct:1,explain:'Correct. The text says the library closes at 4 pm on Saturdays.'},
+ 'Mixed skills':{kind:'Quick practice quiz',q:'Choose the sentence that is grammatically correct.',opts:['She have studied English for two years.','She has studied English for two years.','She studying English for two years.'],correct:1,explain:'Correct. “She has studied” uses the present perfect correctly.'}
+};
+function practiceModal(skill){if(skill==='Writing'||skill==='Speaking'){const content=skill==='Writing'?'<strong>Practice tip</strong><p>Try writing a short response with a clear opening, two main ideas, and a brief conclusion. Leave a few minutes to check grammar and spelling.</p>':'<strong>Practice tip</strong><p>Choose a familiar topic, such as your hometown. Answer directly, give a reason, and add a specific example. Practise speaking naturally rather than memorising a full script.';openModal(`<div class="modal-kicker">${skill} preparation</div><h2 id="modalTitle">A quick ${skill.toLowerCase()} tip</h2><div class="sample-question">${content}</div><button class="btn btn-purple" id="practiceDone">Got it</button>`);document.getElementById('practiceDone').addEventListener('click',closeModal);return}
+const item=practiceData[skill]||practiceData['Mixed skills'];openModal(`<div class="modal-kicker">${skill} preparation · Sample only</div><h2 id="modalTitle">Try a practice question</h2><div class="sample-question"><strong>${item.q}</strong><div id="answerOptions">${item.opts.map((o,i)=>`<button class="answer-option" data-answer="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><div class="result-note" id="resultNote" aria-live="polite"></div></div><button class="btn btn-purple" id="practiceClose">Close practice</button><p style="font-size:10px;margin-bottom:0">This is an original demo question, not an official IELTS test item.</p>`);document.querySelectorAll('[data-answer]').forEach(btn=>btn.addEventListener('click',()=>{const chosen=Number(btn.dataset.answer);document.querySelectorAll('[data-answer]').forEach(x=>{x.disabled=true;if(Number(x.dataset.answer)===item.correct)x.classList.add('correct')});if(chosen!==item.correct)btn.classList.add('wrong');document.getElementById('resultNote').textContent=(chosen===item.correct?'Well done! ':'Not quite. ')+item.explain}));document.getElementById('practiceClose').addEventListener('click',closeModal)}
+document.querySelectorAll('[data-practice]').forEach(b=>b.addEventListener('click',()=>practiceModal(b.dataset.practice)));
+document.querySelectorAll('.faq-question').forEach(btn=>btn.addEventListener('click',()=>{const parent=btn.closest('.faq-item');const wasOpen=parent.classList.contains('open');document.querySelectorAll('.faq-item').forEach(item=>{item.classList.remove('open');item.querySelector('.faq-question').setAttribute('aria-expanded','false')});if(!wasOpen){parent.classList.add('open');btn.setAttribute('aria-expanded','true')}}));
+/* ==========================================================
+   TEST & RESULTS  (demo data - not real IELTS results)
+   >>> CHANGE THE DETAILS IN THIS BOX LATER <<<
+   - Text between quotes ' ' is what shows on the page.
+   - To add another test, copy one whole { ... } block inside "tests" and add a comma.
+   - To show an upcoming test, add one { ... } line inside "upcoming".
+   - Leave overall:null and the overall band score is calculated for you.
+   ========================================================== */
+const resultsData = {
+  intro: 'Manage your bookings, see your results and plan your next step.',
+  upcoming: [
+    // Example (remove the two // to show it):
+    // { title:'IELTS Academic', date:'20 December 2026', format:'IELTS on computer', location:'Dhaka' }
+  ],
+  tests: [
+    {
+      id: 'test1',
+      title: 'IELTS Academic',
+      date: '17 September 2026',
+      format: 'IELTS on paper',
+      location: 'Dhaka',
+      candidate: 'Mim Akter',
+      centre: 'Badda,Dhaka',
+      reference: 'IELTS-2026-001',
+      trf: '26BD520185AKTM001A',
+      overall: 8.0,
+      optionsText: 'Find out which organisations recognise your score and what you can do next.',
+      skills: [
+        { name: 'Listening', score: 9.0,
+          explain: 'Test takers at Band 9 can typically follow extended speech involving complex and detailed argumentation, as well as predict further development. They can recognize a wide range of vocabulary, including specialized, technical, and academic terminology and idiomatic language.',
+          improve: 'As Band 9 is the highest possible IELTS score, the focus should be on maintaining listening proficiency through exposure to authentic English lectures, academic discussions, interviews and a variety of accents.' },
+        { name: 'Reading', score: 9.0,
+          explain: 'Test takers at Band 9 can typically read with ease virtually all forms of written language. They can understand a wide range of vocabulary, including idiomatic, colloquial and specialized expressions, and distinguish fine shades of meaning in complex texts. They demonstrate exceptional comprehension of written information and can interpret ideas and arguments with a high degree of accuracy.',
+          improve: 'Continue reading academic articles, research publications, opinion pieces and other challenging texts. Practise identifying subtle differences in meaning, evaluating arguments and summarising complex information to maintain reading proficiency.' },
+        { name: 'Writing', score: 7.0,
+          explain: 'Test takers at Band 7 can typically address the requirements of a writing task, present a clear position and develop and support their main ideas. They can organise information logically, demonstrate effective paragraphing and use a range of vocabulary and complex grammatical structures. However, occasional weaknesses in idea development, coherence, vocabulary precision or grammatical accuracy may remain and affect their ability to achieve a higher band score.',
+          improve: 'Focus on developing arguments in greater depth, supporting ideas with relevant explanations and examples, and maintaining logical progression throughout the response. Expand vocabulary through accurate collocations and paraphrasing, and practise using varied grammatical structures without sacrificing accuracy. Regularly review writing against the four official assessment criteria: Task Achievement or Task Response, Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy. Task 2 should receive particular attention because it carries twice the weight of Task 1 in the Writing score.' },
+        { name: 'Speaking', score: 6.5,
+          explain: 'Test takers at Band 6.5 can typically communicate their ideas on familiar and less familiar topics and maintain interaction in a range of situations. They may demonstrate an ability to use both simple and complex grammatical structures and a reasonable range of vocabulary. However, inconsistencies in fluency, vocabulary flexibility, grammatical accuracy or pronunciation may sometimes affect the clarity and effectiveness of their communication. The particular areas requiring improvement depend on their performance across the four Speaking assessment criteria.',
+          improve: 'Practise extending answers with clear explanations and relevant examples, particularly in Speaking Parts 2 and 3. Develop topic-specific vocabulary and natural collocations, improve grammatical accuracy during spontaneous speech, and practise clear pronunciation, word stress and intonation. Recording practice responses and reviewing them against the four criteria—Fluency and Coherence, Lexical Resource, Grammatical Range and Accuracy, and Pronunciation—can help identify areas that need attention.' }
+      ],
+      dateLocation: [
+        ['Test date', '17 September 2026'],
+        ['Start time', '9:00 AM'],
+        ['Format', 'IELTS on paper'],
+        ['Test centre', 'Badda, Dhaka'],
+        ['Country', 'Bangladesh']
+      ],
+      testTaker: [
+        ['Full name', 'Mim Akhter'],
+        ['Candidate number', '520185'],
+        ['Nationality', 'Bangladeshi'],
+        ['First language', 'Bengali']
+      ],
+      organisations: [
+        ['University', 'Not sent yet'],
+        ['Immigration Office', 'Not sent yet']
+      ],
+      payments: [
+        ['Test fee', 'BDT 29600'],
+        ['Payment status', 'Paid'],
+        ['Payment date', '9 August 2026']
+      ]
+    }
+  ]
+};
+/* ===================== END OF DATA ===================== */
+
+const rsState = { view: 'list', id: null, tab: 'results' };
+const RS_ICONS = {
+  listening: '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/>',
+  reading: '<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/>',
+  writing: '<path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/>',
+  speaking: '<path d="M4 5h16v11H11l-5 4v-4H4z"/>',
+  doc: '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>'
+};
+function rsIcon(name) { return `<svg class="rs-ico" viewBox="0 0 24 24" aria-hidden="true">${RS_ICONS[String(name).toLowerCase()] || RS_ICONS.reading}</svg>`; }
+function rsBand(avg) { const w = Math.floor(avg), f = avg - w; return f < 0.25 ? w : f < 0.75 ? w + 0.5 : w + 1; }
+function rsOverall(t) {
+  if (t.overall !== null && t.overall !== undefined) return Number(t.overall);
+  const s = t.skills.map(x => Number(x.score));
+  return rsBand(s.reduce((a, b) => a + b, 0) / s.length);
+}
+function rsKV(rows) { return `<div class="rs-card"><dl class="rs-kv">${rows.map(r => `<dt>${escapeHtml(r[0])}</dt><dd>${escapeHtml(r[1])}</dd>`).join('')}</dl></div>`; }
+
+function rsListHtml() {
+  const d = resultsData;
+  const upcoming = d.upcoming.length
+    ? d.upcoming.map(u => `<article class="rs-card"><div class="rs-test-title" style="text-decoration:none;cursor:default">${escapeHtml(u.title)}</div><div class="rs-test-date">${escapeHtml(u.date)}</div><div class="rs-meta">${rsIcon('doc')} ${escapeHtml(u.format)}</div><div class="rs-meta">${escapeHtml(u.location)}</div></article>`).join('') + '<p><button class="rs-btn" type="button" data-rs="book">Book a new test</button></p>'
+    : `<div class="rs-card"><p class="rs-empty">You don\u2019t have any upcoming tests</p><button class="rs-btn" type="button" data-rs="book">Book a new test</button></div>`;
+  const previous = d.tests.map(t => `<article class="rs-card rs-test">
+      <div>
+        <button class="rs-test-title" type="button" data-rs="open" data-id="${escapeHtml(t.id)}">${escapeHtml(t.title)}</button>
+        <div class="rs-test-date">${escapeHtml(t.date)}</div>
+        <div class="rs-meta">${rsIcon('doc')} ${escapeHtml(t.format)}</div>
+        <div class="rs-meta">${escapeHtml(t.location)}</div>
+      </div>
+      <div class="rs-score-box">You scored:<br><span class="rs-ring" role="img" aria-label="Overall band score ${rsOverall(t)}">${rsOverall(t)}</span></div>
+      <button class="rs-btn rs-block" type="button" data-rs="open" data-id="${escapeHtml(t.id)}">See full result</button>
+    </article>`).join('');
+  return `<div class="rs-banner"><div class="rs-banner-in"><h2 id="rsListTitle" tabindex="-1">Tests &amp; results</h2><p>${escapeHtml(d.intro)}</p><span class="rs-demo-note">Demo data \u2013 not real IELTS results</span></div></div>
+    <div class="rs-wrap"><h3 class="rs-h">Your upcoming tests</h3>${upcoming}<h3 class="rs-h">Your previous tests &amp; scores</h3>${previous}</div>`;
+}
+
+function rsResultsPanel(t) {
+  const overall = rsOverall(t);
+  const rows = t.skills.map(s => `<div class="rs-row">${rsIcon(s.name)}<span>${escapeHtml(s.name)}</span><span class="rs-row-score">${Number(s.score).toFixed(1)}</span></div>`).join('');
+  const explained = t.skills.map(s => `<div class="rs-row">${rsIcon(s.name)}<span>${escapeHtml(s.name)}</span><span class="rs-row-score">${Number(s.score).toFixed(1)}</span></div>
+    <p class="rs-explain">${escapeHtml(s.explain)}</p>
+    <div class="rs-improve"><strong>How to improve:</strong><p>${escapeHtml(s.improve)}</p></div>`).join('');
+  return `<div class="rs-overall"><strong class="rs-overall-label">Your overall band score</strong><span class="rs-ring rs-ring-lg" role="img" aria-label="Overall band score ${overall}">${overall}</span><button class="rs-link" type="button" data-rs="jump">View full scores and explanation</button></div>
+    <div class="rs-card"><h3 class="rs-card-h">What can you do with this score?</h3><p>${escapeHtml(t.optionsText)}</p><button class="rs-btn rs-outline" type="button" data-rs="tab" data-tab="organisations">See my options</button></div>
+    <hr class="rs-dots">
+    <h3 class="rs-h" id="rsFull">Your full score and explanation</h3>${rows}
+    <div class="rs-row rs-total"><span>Your overall band score</span><span class="rs-row-score">${overall.toFixed(1)}</span></div>
+    <hr class="rs-dots">
+    <h3 class="rs-h">Your scores explained:</h3>${explained}`;
+}
+
+function rsDetailHtml(t) {
+  const tabs = [['dateLocation', 'Date &amp; location'], ['testTaker', 'Test Taker'], ['results', 'Results'], ['organisations', 'Recognising Organisations'], ['payments', 'Payments']];
+  let body;
+  if (rsState.tab === 'dateLocation') body = rsKV(t.dateLocation);
+  else if (rsState.tab === 'testTaker') body = rsKV(t.testTaker);
+  else if (rsState.tab === 'organisations') body = rsKV(t.organisations);
+  else if (rsState.tab === 'payments') body = rsKV(t.payments);
+  else body = rsResultsPanel(t);
+  return `<div class="rs-head"><button class="rs-back" type="button" data-rs="back">\u2190 Back to all tests</button>
+      <h2 id="rsTitle" tabindex="-1">${escapeHtml(t.title)}: ${escapeHtml(t.date)}</h2>
+      <div class="rs-head-grid"><div><p>${escapeHtml(t.candidate)}</p><p>${escapeHtml(t.centre)}</p></div>
+      <div class="rs-head-right"><p>Reference: ${escapeHtml(t.reference)}</p><p>TRF number: ${escapeHtml(t.trf)}</p></div></div></div>
+    <div class="rs-shell"><div class="rs-tabs" id="rsTabs" role="tablist">${tabs.map(x => `<button class="rs-tab" type="button" role="tab" aria-selected="${rsState.tab === x[0]}" data-rs="tab" data-tab="${x[0]}">${x[1]}</button>`).join('')}</div>
+    <div class="rs-panel" role="tabpanel">${body}</div></div>`;
+}
+
+function renderResults() {
+  const t = resultsData.tests.find(x => x.id === rsState.id);
+  const detail = rsState.view === 'detail' && t;
+  document.getElementById('results').classList.toggle('rs-detail', !!detail);
+  document.getElementById('resultsApp').innerHTML = detail ? rsDetailHtml(t) : rsListHtml();
+}
+function showResults(scroll) {
+  const s = document.getElementById('results');
+  s.hidden = false;
+  if (scroll) s.scrollIntoView({ behavior: 'smooth' });
+}
+renderResults();
+document.getElementById('resultsApp').addEventListener('click', e => {
+  const b = e.target.closest('[data-rs]');
+  if (!b) return;
+  const a = b.dataset.rs, sec = document.getElementById('results');
+  if (a === 'book') { if (currentUser) reservationModal(currentUser.email); else authModal('login'); return; }
+  if (a === 'open') { rsState.view = 'detail'; rsState.id = b.dataset.id; rsState.tab = 'results'; renderResults(); sec.scrollIntoView({ behavior: 'smooth' }); const h = document.getElementById('rsTitle'); if (h) h.focus({ preventScroll: true }); return; }
+  if (a === 'back') { rsState.view = 'list'; renderResults(); sec.scrollIntoView({ behavior: 'smooth' }); const h = document.getElementById('rsListTitle'); if (h) h.focus({ preventScroll: true }); return; }
+  if (a === 'tab') { rsState.tab = b.dataset.tab; renderResults(); const nb = document.querySelector('[data-tab="' + rsState.tab + '"]'); if (nb) nb.focus({ preventScroll: true }); document.getElementById('rsTabs').scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+  if (a === 'jump') { document.getElementById('rsFull').scrollIntoView({ behavior: 'smooth' }); }
+});
+document.getElementById('resultsLink').addEventListener('click', e => {
+  e.preventDefault();
+  history.replaceState(null, '', '#results');
+  showResults(true);
+});
+if (location.hash === '#results') setTimeout(() => showResults(true), 60);
+</script>
+</body>
+</html>
+
+   <style>.mini-tag{display:none}</style>
+
+      <style>.demo-strip{display:none}</style>
+
+         <style>.rs-demo-note{display:none}</style>
+
+            <style>.footer{display:none}</style>
+
+            <!-- Declared Result + View eTRF -->
+<style>
+.rs-trf{text-align:center;padding:44px 0 6px}
+.rs-trf h3{margin:0 0 14px;font-size:26px;color:var(--purple)}
+.rs-trf a{font-size:22px;font-weight:800;color:#0b56b3;text-decoration:underline}
+</style>
+<script>
+const ETRF_FILE = 'etrf.pdf';   /* <- the name of your PDF file */
+new MutationObserver(function () {
+  const panel = document.querySelector('.rs-panel');
+  const onResults = document.querySelector('.rs-tab[aria-selected="true"][data-tab="results"]');
+  if (!panel || !onResults || document.querySelector('.rs-trf')) return;
+  panel.insertAdjacentHTML('afterend', '<div class="rs-trf"><h3>Declared Result</h3><a href="' + ETRF_FILE + '" download="eTRF.pdf">View eTRF</a></div>');
+}).observe(document.getElementById('resultsApp'), { childList: true });
+</script>
